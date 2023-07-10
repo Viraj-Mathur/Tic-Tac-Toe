@@ -1,0 +1,115 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    
+    /* ff 3.6+ */
+    background: -moz-linear-gradient(173deg, rgba(116, 193, 255, 1) 1%, rgba(10, 22, 76, 1) 100%); 
+    
+    /* safari 5.1+, chrome 10+ */
+    background: -webkit-linear-gradient(173deg, rgba(116, 193, 255, 1) 1%, rgba(10, 22, 76, 1) 100%);
+    
+    /* opera 11.10+ */
+    background: -o-linear-gradient(173deg, rgba(116, 193, 255, 1) 1%, rgba(10, 22, 76, 1) 100%);
+    
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A164C', endColorstr='#74C1FF', GradientType=1);
+    
+    /* ie 10+ */
+    background: -ms-linear-gradient(173deg, rgba(116, 193, 255, 1) 1%, rgba(10, 22, 76, 1) 100%);
+    
+    /* global 94%+ browsers support */
+    background: linear-gradient(173deg, rgba(116, 193, 255, 1) 1%, rgba(10, 22, 76, 1) 100%);
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.game-info {
+    color: rgb(4, 43, 65);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(6, 47, 79, 0.15);
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    font-size: 45px;
+    box-shadow: 0 0 10px rgba(8, 23, 75, 0.5);
+}
+
+
+
+.tic-tac-toe {
+    width: 50%;
+    max-width: 30rem;
+    background-color: rgba(56, 16, 16, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(117, 43, 43, 0.25);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+}
+
+.box {
+    position: static;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 4rem;
+    color: rgb(43, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5 {
+    border-right: 2px solid rgb(82, 79, 79);
+    border-bottom: 2px solid rgb(82, 79, 79);
+}
+
+.box3, .box6 {
+    border-bottom: 2px solid rgb(82, 79, 79);
+}
+
+.box7, .box8 {
+    border-right: 2px solid rgb(82, 79, 79);
+}
+
+
+
+.btn {
+    color: rgb(223, 228, 204);
+    position: fixed;
+    text-align: center;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    display: none;
+    font-size: 45px;
+}
+
+
+.btn.active {
+    display: flex;
+}
+
+.win {
+    background-color: rgb(109, 214, 85);
+}
